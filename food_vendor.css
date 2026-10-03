@@ -1,6 +1,5 @@
 /* =========================================
    FOOD VENDOR - MAIN STYLESHEET
-   Applies to all pages
    ========================================= */
 
 * {
@@ -26,16 +25,17 @@ body {
 
 header {
     width: 100%;
-    padding: 12px 5%;
+    padding: 10px 5%;
     background: #000000;
 }
 
 header table {
+    width: 100%;
     border-collapse: collapse;
 }
 
 .site-logo {
-    width: 80px;
+    width: 65px;
     height: auto;
     display: block;
 }
@@ -60,7 +60,7 @@ nav a:hover {
 }
 
 /* =========================================
-   MAIN CONTENT
+   MAIN
    ========================================= */
 
 main {
@@ -107,20 +107,16 @@ strong {
 }
 
 /* =========================================
-   MENU INTRO
+   IMAGES
    ========================================= */
 
-main > section:first-child {
-    padding-top: 70px;
-    padding-bottom: 40px;
-}
-
-main > section:first-child h1 {
-    color: #FDB502;
+img {
+    max-width: 100%;
+    border-radius: 10px;
 }
 
 /* =========================================
-   MENU TABLES
+   MENU / CONTENT TABLES
    ========================================= */
 
 section table {
@@ -145,11 +141,6 @@ section table td:hover {
    FOOD IMAGES
    ========================================= */
 
-section img {
-    max-width: 100%;
-    border-radius: 10px;
-}
-
 section table td img {
     display: block;
     width: 100%;
@@ -169,14 +160,6 @@ section table td strong {
 }
 
 /* =========================================
-   RATINGS
-   ========================================= */
-
-section table td p {
-    margin: 10px 0;
-}
-
-/* =========================================
    BUTTONS
    ========================================= */
 
@@ -189,8 +172,7 @@ button {
     font-size: 15px;
     font-weight: bold;
     cursor: pointer;
-    transition: background 0.3s ease,
-                transform 0.2s ease;
+    transition: background 0.3s ease, transform 0.2s ease;
 }
 
 button:hover {
@@ -207,12 +189,79 @@ button a {
 }
 
 /* =========================================
-   CTA SECTION
+   CONTACT PAGE
+   ========================================= */
+
+form {
+    width: 100%;
+    max-width: 600px;
+}
+
+form p {
+    margin-bottom: 22px;
+}
+
+form label {
+    display: inline-block;
+    margin-bottom: 6px;
+    color: #ffffff;
+}
+
+form input,
+form textarea {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    padding: 14px 16px;
+    margin: 0;
+    background: #111111;
+    color: #ffffff;
+    border: 1px solid #444444;
+    border-radius: 6px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+}
+
+form input::placeholder,
+form textarea::placeholder {
+    color: #888888;
+}
+
+form input:focus,
+form textarea:focus {
+    outline: none;
+    border-color: #FDB502;
+    box-shadow: 0 0 0 2px rgba(253, 181, 2, 0.15);
+}
+
+form textarea {
+    min-height: 180px;
+    resize: vertical;
+}
+
+form button {
+    margin-top: 5px;
+}
+
+/* =========================================
+   CONTACT INFORMATION
+   ========================================= */
+
+.contact-info h3 {
+    color: #FDB502;
+}
+
+.contact-info p {
+    margin-top: 5px;
+}
+
+/* =========================================
+   CENTERED CTA SECTIONS
    ========================================= */
 
 section[align="center"] {
     text-align: center;
-    padding: 80px 20px;
+    padding: 70px 20px;
 }
 
 section[align="center"] h2 {
@@ -239,6 +288,10 @@ footer table td {
     background: transparent;
     border: none;
     padding: 20px;
+}
+
+footer table td:hover {
+    border-color: transparent;
 }
 
 footer h2 {
@@ -271,7 +324,7 @@ footer > p {
 }
 
 /* =========================================
-   REMOVE OLD HORIZONTAL LINES
+   REMOVE HORIZONTAL LINES
    ========================================= */
 
 hr {
@@ -279,7 +332,7 @@ hr {
 }
 
 /* =========================================
-   MOBILE / TABLET
+   TABLET
    ========================================= */
 
 @media (max-width: 900px) {
@@ -289,7 +342,7 @@ hr {
     }
 
     .site-logo {
-        width: 70px;
+        width: 60px;
     }
 
     nav {
@@ -313,6 +366,9 @@ hr {
     }
 }
 
+/* =========================================
+   MOBILE
+   ========================================= */
 
 @media (max-width: 700px) {
 
@@ -326,7 +382,7 @@ hr {
     }
 
     .site-logo {
-        width: 60px;
+        width: 55px;
         margin: 0 auto 15px;
     }
 
@@ -378,6 +434,15 @@ hr {
         height: 220px;
     }
 
+    form {
+        max-width: 100%;
+    }
+
+    form input,
+    form textarea {
+        width: 100%;
+    }
+
     footer table,
     footer tbody,
     footer tr,
@@ -391,11 +456,14 @@ hr {
     }
 }
 
+/* =========================================
+   SMALL PHONES
+   ========================================= */
 
 @media (max-width: 450px) {
 
     .site-logo {
-        width: 55px;
+        width: 50px;
     }
 
     nav {
