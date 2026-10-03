@@ -1,7 +1,7 @@
-/* ================================
+/* =========================================
    FOOD VENDOR - MAIN STYLESHEET
    Applies to all pages
-   ================================ */
+   ========================================= */
 
 * {
     box-sizing: border-box;
@@ -13,109 +13,26 @@ html {
 
 body {
     margin: 0;
-    background-color: #000000;
-    color: #FFFFFF;
+    padding: 0;
+    background: #000000;
+    color: #ffffff;
     font-family: Arial, Helvetica, sans-serif;
     line-height: 1.6;
 }
 
-/* ---------- General ---------- */
-
-a {
-    color: #FDB502;
-    text-decoration: none;
-}
-
-a:hover {
-    color: #F59E00;
-}
-
-button,
-input,
-textarea,
-select {
-    font: inherit;
-}
-
-button {
-    background-color: #FDB502;
-    color: #000000;
-    border: 2px solid #FDB502;
-    padding: 12px 22px;
-    border-radius: 6px;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: #F59E00;
-    border-color: #F59E00;
-}
-
-section {
-    padding: 70px 7%;
-}
-
-h1,
-h2,
-h3 {
-    color: #FFFFFF;
-    line-height: 1.2;
-}
-
-h1 {
-    font-size: 48px;
-}
-
-h2 {
-    font-size: 32px;
-}
-
-h3 {
-    font-size: 22px;
-}
-
-p {
-    color: #D9D9D9;
-}
-
-strong {
-    color: #FDB502;
-}
-
-/* ---------- Header ---------- */
+/* =========================================
+   HEADER
+   ========================================= */
 
 header {
-    background-color: #000000;
-    padding: 5px 7%;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    border: none;
-    box-shadow: none;
+    width: 100%;
+    padding: 12px 5%;
+    background: #000000;
 }
 
 header table {
-    width: 100%;
     border-collapse: collapse;
-    border: none;
 }
-
-header tr,
-header td {
-    border: none;
-}
-
-header td {
-    padding: 0;
-}
-
-header h2 {
-    margin: 0;
-    color: #FDB502;
-}
-
-/* ---------- Logo ---------- */
 
 .site-logo {
     width: 80px;
@@ -123,145 +40,281 @@ header h2 {
     display: block;
 }
 
-/* ---------- Navigation ---------- */
-
 nav {
-    white-space: nowrap;
-    line-height: 1;
-    border: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 28px;
 }
 
 nav a {
-    margin: 0 7px;
-    font-weight: bold;
+    color: #ffffff;
+    text-decoration: none;
     font-size: 18px;
-    border: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
 }
 
 nav a:hover {
-    color: #FFFFFF;
-}
-
-/* ---------- Tables / Cards ---------- */
-
-table {
-    border-collapse: collapse;
-}
-
-table[border="1"] {
-    border: 1px solid #6D4800;
-}
-
-table[border="1"] td {
-    border: 1px solid #6D4800;
-}
-
-td {
-    vertical-align: top;
-}
-
-/* ---------- Hero ---------- */
-
-main > section:first-child {
-    min-height: 500px;
-}
-
-main > section:first-child h1 {
-    margin-top: 15px;
-    margin-bottom: 20px;
-}
-
-main > section:first-child p {
-    max-width: 700px;
-}
-
-main > section:first-child td:last-child h1 {
-    font-size: 120px;
-    margin: 0;
-}
-
-/* ---------- Menu ---------- */
-
-section table td h1 {
     color: #FDB502;
 }
 
-section table td h3 {
-    margin-bottom: 8px;
+/* =========================================
+   MAIN CONTENT
+   ========================================= */
+
+main {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-section table td strong {
-    font-size: 20px;
+section {
+    padding: 60px 0;
 }
 
-section table td p {
-    max-width: 600px;
+/* =========================================
+   HEADINGS
+   ========================================= */
+
+h1 {
+    font-size: 48px;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    color: #ffffff;
 }
 
-/* ---------- Forms ---------- */
-
-form {
-    background-color: #111111;
-    border: 1px solid #6D4800;
-    padding: 30px;
-    border-radius: 10px;
+h2 {
+    font-size: 32px;
+    line-height: 1.3;
+    margin-bottom: 20px;
+    color: #FDB502;
 }
 
-input,
-textarea,
-select {
+h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+p {
+    font-size: 16px;
+    color: #dddddd;
+}
+
+strong {
+    color: #FDB502;
+}
+
+/* =========================================
+   MENU INTRO
+   ========================================= */
+
+main > section:first-child {
+    padding-top: 70px;
+    padding-bottom: 40px;
+}
+
+main > section:first-child h1 {
+    color: #FDB502;
+}
+
+/* =========================================
+   MENU TABLES
+   ========================================= */
+
+section table {
     width: 100%;
-    max-width: 500px;
-    background-color: #000000;
-    color: #FFFFFF;
-    border: 1px solid #6D4800;
-    padding: 12px;
-    border-radius: 5px;
-    outline: none;
+    border-collapse: separate;
+    border-spacing: 18px;
 }
 
-input:focus,
-textarea:focus,
-select:focus {
+section table td {
+    background: #111111;
+    border: 1px solid #292929;
+    border-radius: 12px;
+    padding: 25px;
+    vertical-align: top;
+}
+
+section table td:hover {
     border-color: #FDB502;
 }
 
-textarea {
-    resize: vertical;
+/* =========================================
+   FOOD IMAGES
+   ========================================= */
+
+section img {
+    max-width: 100%;
+    border-radius: 10px;
 }
 
-/* ---------- Footer ---------- */
+section table td img {
+    display: block;
+    width: 100%;
+    max-width: 300px;
+    height: 200px;
+    object-fit: cover;
+    margin: 0 auto 20px;
+}
+
+/* =========================================
+   PRICES
+   ========================================= */
+
+section table td strong {
+    font-size: 20px;
+    color: #FDB502;
+}
+
+/* =========================================
+   RATINGS
+   ========================================= */
+
+section table td p {
+    margin: 10px 0;
+}
+
+/* =========================================
+   BUTTONS
+   ========================================= */
+
+button {
+    background: #FDB502;
+    color: #000000;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 6px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease,
+                transform 0.2s ease;
+}
+
+button:hover {
+    background: #F59E00;
+    transform: translateY(-2px);
+}
+
+a {
+    color: #FDB502;
+}
+
+button a {
+    color: #000000;
+}
+
+/* =========================================
+   CTA SECTION
+   ========================================= */
+
+section[align="center"] {
+    text-align: center;
+    padding: 80px 20px;
+}
+
+section[align="center"] h2 {
+    font-size: 36px;
+}
+
+/* =========================================
+   FOOTER
+   ========================================= */
 
 footer {
-    background-color: #080808;
-    padding: 35px 7%;
+    margin-top: 60px;
+    padding: 50px 5% 25px;
+    background: #0a0a0a;
+    border-top: 1px solid #222222;
 }
 
 footer table {
     width: 100%;
+    border-collapse: collapse;
+}
+
+footer table td {
+    background: transparent;
+    border: none;
+    padding: 20px;
 }
 
 footer h2 {
     color: #FDB502;
+    font-size: 24px;
 }
 
 footer h3 {
     color: #FDB502;
 }
 
-footer p {
-    margin: 8px 0;
+footer a {
+    color: #ffffff;
+    text-decoration: none;
+    line-height: 2;
 }
 
-/* ---------- Tablet ---------- */
+footer a:hover {
+    color: #FDB502;
+}
 
-@media (max-width: 800px) {
+footer p {
+    color: #aaaaaa;
+}
+
+footer > p {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #222222;
+}
+
+/* =========================================
+   REMOVE OLD HORIZONTAL LINES
+   ========================================= */
+
+hr {
+    display: none;
+}
+
+/* =========================================
+   MOBILE / TABLET
+   ========================================= */
+
+@media (max-width: 900px) {
 
     header {
-        padding: 5px 4%;
-        border: none;
-        box-shadow: none;
+        padding: 10px 4%;
     }
+
+    .site-logo {
+        width: 70px;
+    }
+
+    nav {
+        gap: 18px;
+    }
+
+    nav a {
+        font-size: 16px;
+    }
+
+    h1 {
+        font-size: 40px;
+    }
+
+    h2 {
+        font-size: 28px;
+    }
+
+    section table td {
+        padding: 20px;
+    }
+}
+
+
+@media (max-width: 700px) {
 
     header table,
     header tbody,
@@ -270,121 +323,107 @@ footer p {
         display: block;
         width: 100%;
         text-align: center;
-        border: none;
-    }
-
-    header td:last-child {
-        margin-top: 5px;
-    }
-
-    .site-logo {
-        width: 70px;
-        margin: 0 auto;
-    }
-
-    nav {
-        white-space: normal;
-        line-height: 1.5;
-        border: none;
-    }
-
-    nav a {
-        font-size: 16px;
-        margin: 0 5px;
-    }
-
-    section {
-        padding: 45px 5%;
-        overflow-x: auto;
-    }
-
-    h1 {
-        font-size: 38px;
-    }
-
-    h2 {
-        font-size: 27px;
-    }
-
-    section table {
-        min-width: 650px;
-    }
-
-    main > section:first-child table {
-        min-width: 0;
-    }
-
-    main > section:first-child table,
-    main > section:first-child tbody,
-    main > section:first-child tr,
-    main > section:first-child td {
-        display: block;
-        width: 100%;
-    }
-
-    main > section:first-child td:last-child {
-        text-align: center;
-        padding-top: 30px;
-    }
-
-    main > section:first-child td:last-child h1 {
-        font-size: 90px;
-    }
-
-    footer table {
-        min-width: 0;
-    }
-
-    footer td {
-        display: block;
-        width: 100% !important;
-        padding: 15px 0;
-    }
-}
-
-/* ---------- Small Phones ---------- */
-
-@media (max-width: 500px) {
-
-    header {
-        padding: 4px 3%;
-        border: none;
-        box-shadow: none;
     }
 
     .site-logo {
         width: 60px;
+        margin: 0 auto 15px;
+    }
+
+    nav {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    nav a {
+        font-size: 15px;
+    }
+
+    main {
+        width: 94%;
     }
 
     section {
-        padding: 35px 4%;
+        padding: 40px 0;
     }
 
     h1 {
-        font-size: 32px;
+        font-size: 34px;
+    }
+
+    h2 {
+        font-size: 26px;
+    }
+
+    section table {
+        display: block;
+        border-spacing: 0;
+    }
+
+    section table tbody,
+    section table tr {
+        display: block;
+        width: 100%;
+    }
+
+    section table td {
+        display: block;
+        width: 100% !important;
+        margin-bottom: 20px;
+    }
+
+    section table td img {
+        max-width: 100%;
+        height: 220px;
+    }
+
+    footer table,
+    footer tbody,
+    footer tr,
+    footer td {
+        display: block;
+        width: 100%;
+    }
+
+    footer table td {
+        padding: 15px 0;
+    }
+}
+
+
+@media (max-width: 450px) {
+
+    .site-logo {
+        width: 55px;
+    }
+
+    nav {
+        gap: 12px;
+    }
+
+    nav a {
+        font-size: 14px;
+    }
+
+    h1 {
+        font-size: 30px;
     }
 
     h2 {
         font-size: 24px;
     }
 
-    nav a {
-        display: inline-block;
-        margin: 2px 4px;
+    h3 {
+        font-size: 20px;
+    }
+
+    p {
         font-size: 15px;
     }
 
     button {
-        padding: 10px 16px;
+        width: 100%;
+        max-width: 220px;
     }
-
-    form {
-        padding: 20px;
-    }
-}
-
-/* ---------- Remove Horizontal Lines ---------- */
-
-hr {
-    display: none;
 }
