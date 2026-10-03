@@ -60,7 +60,7 @@ nav a:hover {
 }
 
 /* =========================================
-   MAIN
+   MAIN CONTENT
    ========================================= */
 
 main {
@@ -116,7 +116,27 @@ img {
 }
 
 /* =========================================
-   MENU / CONTENT TABLES
+   HERO IMAGE
+   ========================================= */
+
+.hero-image img {
+    width: 100%;
+    max-width: 500px;
+    height: 450px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.about-image img {
+    width: 100%;
+    max-width: 400px;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+/* =========================================
+   TABLES
    ========================================= */
 
 section table {
@@ -138,24 +158,57 @@ section table td:hover {
 }
 
 /* =========================================
-   FOOD IMAGES
+   CATEGORY CARDS
    ========================================= */
 
-section table td img {
+.category-card {
+    text-align: center;
+}
+
+.category-card img {
     display: block;
     width: 100%;
-    max-width: 300px;
-    height: 200px;
+    height: 180px;
     object-fit: cover;
-    margin: 0 auto 20px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.category-card h3 {
+    color: #FDB502;
 }
 
 /* =========================================
-   PRICES
+   FOOD CARDS
    ========================================= */
 
-section table td strong {
+.food-card img {
+    display: block;
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.food-card h3 {
+    color: #ffffff;
+}
+
+.food-card strong {
     font-size: 20px;
+    color: #FDB502;
+}
+
+/* =========================================
+   FEATURE CARDS
+   ========================================= */
+
+.feature-card {
+    text-align: center;
+}
+
+.feature-card h3 {
     color: #FDB502;
 }
 
@@ -172,7 +225,8 @@ button {
     font-size: 15px;
     font-weight: bold;
     cursor: pointer;
-    transition: background 0.3s ease, transform 0.2s ease;
+    transition: background 0.3s ease,
+                transform 0.2s ease;
 }
 
 button:hover {
@@ -189,7 +243,20 @@ button a {
 }
 
 /* =========================================
-   CONTACT PAGE
+   CENTERED SECTIONS
+   ========================================= */
+
+section[align="center"] {
+    text-align: center;
+    padding: 70px 20px;
+}
+
+section[align="center"] h2 {
+    font-size: 36px;
+}
+
+/* =========================================
+   CONTACT FORM
    ========================================= */
 
 form {
@@ -244,27 +311,15 @@ form button {
 }
 
 /* =========================================
-   CONTACT INFORMATION
+   ORDER / CTA SECTION
    ========================================= */
 
-.contact-info h3 {
-    color: #FDB502;
-}
-
-.contact-info p {
-    margin-top: 5px;
-}
-
-/* =========================================
-   CENTERED CTA SECTIONS
-   ========================================= */
-
-section[align="center"] {
+.order-section {
     text-align: center;
-    padding: 70px 20px;
+    padding: 80px 20px;
 }
 
-section[align="center"] h2 {
+.order-section h2 {
     font-size: 36px;
 }
 
@@ -364,6 +419,18 @@ hr {
     section table td {
         padding: 20px;
     }
+
+    .hero-image img {
+        height: 350px;
+    }
+
+    .category-card img {
+        height: 160px;
+    }
+
+    .food-card img {
+        height: 200px;
+    }
 }
 
 /* =========================================
@@ -429,9 +496,20 @@ hr {
         margin-bottom: 20px;
     }
 
-    section table td img {
-        max-width: 100%;
+    .hero-image img {
+        height: 300px;
+    }
+
+    .about-image img {
+        height: 280px;
+    }
+
+    .category-card img {
         height: 220px;
+    }
+
+    .food-card img {
+        height: 240px;
     }
 
     form {
@@ -493,5 +571,14 @@ hr {
     button {
         width: 100%;
         max-width: 220px;
+    }
+
+    .hero-image img {
+        height: 250px;
+    }
+
+    .category-card img,
+    .food-card img {
+        height: 220px;
     }
 }
